@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -J	subset
-#SBATCH	-A	snic2017-7-328
+#SBATCH	-A	XXXXX
 #SBATCH -p	core
 #SBATCH -n	1
 #SBATCH -t	5-00:00:00
