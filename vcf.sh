@@ -40,8 +40,12 @@ keep=$2
 output=$3
 vcftools --gzvcf $input --keep $keep --recode --recode-INFO-all --stdout | bgzip > $output
 vcftools --vcf $input --remove $keep --recode --recode-INFO-all --out $output
-######
-
+######allele frequency
+input=$1
+output=$2
+vcftools --gzvcf $input --freq --out $output
+######genotypes
+vcftools --vcf $input --extract-FORMAT-info GT --out $output
 
 
 
